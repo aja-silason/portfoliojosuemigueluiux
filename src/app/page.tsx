@@ -1,7 +1,10 @@
-export const Home = () => {
+import { Container } from "@/components/container"
+import { Header } from "@/components/header"
+
+export default function Home (){
   return(
-    <span>
-      <p>Estou nan home</p>
-    </span>
+    <Container>
+      <Header/>
+    </Container>
   )
 }
