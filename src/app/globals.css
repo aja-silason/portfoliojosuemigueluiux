@@ -7,6 +7,28 @@
   --foreground: #171717;
 }
 
+@font-face {
+  font-family: 'grotesk';
+  src: url('./fonts/SpaceGrotesk-VariableFont_wght.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'viga';
+  src: url('./fonts/Viga-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'syne';
+  src: url('./fonts/Syne-VariableFont_wght.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
