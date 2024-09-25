@@ -16,7 +16,7 @@ export const Projects = () => {
                 <Image src={image4} alt=""/>
                 <Image src={image5} alt=""/>
             </div>
-            <div className="flex gap-[20em] h-[1em]">
+            <div className="flex gap-[20em] h-[10em]">
                 <div className="shadow-bottomblack sm:mt-[10em] "></div>
                 <div className="shadow-bottomblack sm:mt-[10em] "></div>
                 <div className="shadow-bottomblack sm:mt-[10em] "></div>

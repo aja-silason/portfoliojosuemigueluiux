@@ -40,7 +40,7 @@ export const Header = () => {
                     Opaaaaah! <Image src={hand} alt="" className="z-1"/> Eu sou Josué Design
                     </span>
                     <span className="font-[900] font-[grotesk] text-[30pt]">
-                    Construindo <span className="text-[#105D94]">produtos digitais</span> intuitivas de forma moderna e de alta qualidade
+                    Construindo <span className="text-[#105D94]">produtos digitais</span> intuitivos de forma moderna e com alta qualidade
                     </span>
                 </div>
 
