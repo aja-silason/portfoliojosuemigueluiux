@@ -14,6 +14,7 @@ const config: Config = {
       },
       boxShadow: {
         glow: '10px -150px 1000px 200px #1D87C5, 100px -150px 1000px 20px #1D87C5',
+        bottomblack: '10px -150px 1000px 200px #000, 100px -150px 1000px 20px #000',
         panel: '10px 0px 10px 100px #1D87C5, 10px -150px 100px 20px #1D87C5'
     },
     fontFamily: {
