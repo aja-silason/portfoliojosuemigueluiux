@@ -9,7 +9,7 @@ export const Header = () => {
                 <span>
                     <p className="font-[700] text-[14pt]">Josué Miguel</p>
                 </span>
-                <span className="text-white rounded shadow-glow transition duration-300 "></span>
+                <span className="text-white rounded-[100px] shadow-glow transition duration-300 "></span>
                 <span className="flex gap-[.5em] items-center font-[400]">
                     <span className="w-[8px] h-[8px] bg-[#05900C] rounded-[100px]"></span>
                     Disponível para projectos
