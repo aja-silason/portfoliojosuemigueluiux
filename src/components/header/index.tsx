@@ -24,7 +24,7 @@ export const Header = () => {
                     <Image src={globalImage} alt="global-image"/>
                 </span>
             </div>
-            <div className="flex items-center justify-between flex-col gap-[1.5em]">
+            <div className="flex items-center justify-between flex-col gap-[2em]">
                 <div className={`flex overflow-hidden items-center justify-center pt-[2em] my-[2em]`}>
                     <span className="flex items-center justify-center">
                         <Image src={rotateImage} alt="" className={`${Style.rotateText} z-1`}/>
@@ -44,7 +44,7 @@ export const Header = () => {
                     </span>
                 </div>
 
-                <ButtonLink text="Inicie seu Projecto"/>
+                <ButtonLink text="Inicie seu Projecto" href="#"/>
 
             </div>
 
