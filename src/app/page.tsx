@@ -10,7 +10,7 @@ export default function Home (){
       <Header/>
       <TextTransition/>
       <Projects/>
-      <About insta="" linkefin=""/>
+      <About/>
     </Container>
   )
 }
