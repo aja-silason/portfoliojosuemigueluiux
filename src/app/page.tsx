@@ -1,4 +1,4 @@
-import { About } from "@/components/cards"
+import { About, TrajectoryDetails } from "@/components/cards"
 import { Container } from "@/components/container"
 import { Header } from "@/components/header"
 import { Projects } from "@/components/projectscontainer"
@@ -11,6 +11,7 @@ export default function Home (){
       <TextTransition/>
       <Projects/>
       <About/>
+      <TrajectoryDetails/>
     </Container>
   )
 }
