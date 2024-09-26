@@ -1,4 +1,4 @@
-import { About } from "@/components/cards"
+import { About, Services, TrajectoryDetails } from "@/components/cards"
 import { Container } from "@/components/container"
 import { Header } from "@/components/header"
 import { Projects } from "@/components/projectscontainer"
@@ -10,7 +10,9 @@ export default function Home (){
       <Header/>
       <TextTransition/>
       <Projects/>
-      <About insta="" linkefin=""/>
+      <About/>
+      <TrajectoryDetails/>
+      <Services/>
     </Container>
   )
 }
