@@ -212,10 +212,14 @@ const profileImage = require("@/assets/profileImage.png");
 
 const Servicedetails = () => {
     return(
-        <div>
+        <div className="flex flex-col gap-[3em] items-start w-[20em]">
             <span className="flex items-center justify-center">
                 <Image src={rotateImage} alt="" className={`${Style.rotateText} z-1`}/>
                 <Image src={profileImage} alt="" className="z-1"/>
+            </span>
+            <span className="flex flex-col">
+                <span className="font-[grotesk] font-[700] text-[20pt] ml-[-.8em]">Meus Serviços</span>
+                <span className="font-[grotesk] font-[400] text-[12pt] ml-[-1.3em]">Descubra os serviços que ofereço para projetar soluções que solucionam problemas dos usuários.</span>
             </span>
         </div>
     )
