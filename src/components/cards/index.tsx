@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ReactNode } from "react";
+import Style from "@/assets/stytle.module.css";
 
 export const About = () => {
     return(
@@ -54,7 +55,7 @@ const stars = require("@/assets/stars.png");
 export const TrajectoryDetails = () => {
     return (
         <div className="flex md:mx-[15em] sm:mx-[10em] xl:mx-[5em] justify-center items-start gap-[2em] h-[100vh] my-[10em]">
-            <Image src={stars} alt="" className="absolute z-0"/>    
+            <Image src={stars} alt="" className="absolute z-0 "/>    
             <span className="z-10 flex flex-col items-start justify-between w-[50%]">
                 <ProfileDetails/>
                 <Companies/>
@@ -102,7 +103,7 @@ const Companies = () => {
             <span>
                 <span className="font-[grotesk] font-[600] text-[14pt]">Empresas que Colaborei</span>
             </span>
-            <span className="flex justify-between">
+            <span className="flex justify-center flex-wrap items-center gap-[4em]">
                 <Image src={company1} alt="" width={180} height={68}/>
                 <Image src={company2} alt="" width={180} height={68}/>
             </span>
@@ -131,31 +132,37 @@ const Trajectory = () => {
     )
 }
 
+const cardimage1 = require("@/assets/cardimage1.png");
+const cardimage2 = require("@/assets/cardimage2.png");
+const cardimage3 = require("@/assets/cardimage3.png");
+
 const PlayList = () => {
     return (
         <div className="border-[#ccc] border p-[2em] rounded-[8px] border-opacity-[.2] flex flex-col gap-[1em]">
             <TextBoldThin>Minha Playlist</TextBoldThin>
             <span className="flex overflow-x-scroll scrollbar-hidden overflow-hidden">
                 <span className="flex gap-[1em] pr-[1em]">
-                    <CardPlayList/>
-                    <CardPlayList/>
-                    <CardPlayList/>
-                    <CardPlayList/>
-
+                    <CardPlayList icon={cardimage1} description="Uma historia escrita por Deus, Vol 2" author="Thalles Roberto"/>
+                    <CardPlayList icon={cardimage2} description="Sleep" author="Gentle Ambient piano to help you fall asleep. "/>
+                    <CardPlayList icon={cardimage3} description="Uma historia escrita por Deus, Vol 1" author="Thalles Roberto"/>
                 </span>
             </span>
         </div>
     )
 }
 
-const cardimage1 = require("@/assets/cardimage1.png");
+type CardPlayListProps = {
+    description: string,
+    author: string,
+    icon: string,
+}
 
-const CardPlayList = () => {
+const CardPlayList = ({description, author, icon}: CardPlayListProps) => {
     return(
-        <div className="h-[285px] w-[223px] flex-col flex gap-[.5em]">
-            <Image src={cardimage1} alt="" className="rounded-[.3em] w-[200px] h-[200px]"/>
-            <span className="font-[600]">Uma historia escrita por Deus, Vol 2</span>
-            <span className="font-[]">Thalles Roberto</span>
+        <div className="h-[285px] w-[223px] flex-col flex gap-[.3em]">
+            <Image src={icon} alt="" className="rounded-[.3em] w-[200px] h-[200px]"/>
+            <span className="font-[600]">{description}</span>
+            <span className="font-[500] font-[archivo] text-[12pt]">{author}</span>
         </div>
     )
 }
@@ -187,5 +194,37 @@ type TextBoldThin = {
 const TextBoldThin = ({children}: TextBoldThin) => {
     return(
         <span className={`font-[grotesk] font-[600] text-[16pt]`}>{children}</span>
+    )
+}
+
+export const Services = () => {
+    return (
+        <div className="flex justify-between h-[100vh] px-[8em] py-[10em]">
+            <Image src={stars} alt="" className="absolute z-0 "/>    
+            <Servicedetails/>
+            <ServicesCard/>
+        </div>
+    )
+}
+
+const rotateImage = require("@/assets/rotate.png"); 
+const profileImage = require("@/assets/profileImage.png");
+
+const Servicedetails = () => {
+    return(
+        <div>
+            <span className="flex items-center justify-center">
+                <Image src={rotateImage} alt="" className={`${Style.rotateText} z-1`}/>
+                <Image src={profileImage} alt="" className="z-1"/>
+            </span>
+        </div>
+    )
+}
+
+const ServicesCard = () => {
+    return(
+        <div>
+            cards details
+        </div>
     )
 }

@@ -29,6 +29,14 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'archivo';
+  src: url('./fonts/Archivo_SemiCondensed-Light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
