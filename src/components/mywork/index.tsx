@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { CardJob } from "../cards"
+import Link from "next/link";
 
 export const MyWork = () => {
 
@@ -7,6 +8,8 @@ export const MyWork = () => {
     const uxpensive = require("@/assets/uxpensive.png");
     const vertodos = require("@/assets/vertodoscaso.png");
     const baxtterwebsite = require("@/assets/baxtterwebsite.png");
+
+    // const aboutLink = "/about"
 
     return (
         <div className="py-[10em] px-[5em] flex flex-col gap-[6em]">
@@ -16,6 +19,7 @@ export const MyWork = () => {
                     <h2 className="font-[700] font-[grotesk] text-[45px]">VEJA O MEU TRABALHO</h2>
                 </span>
                 <span className="border border-dashed px-[1em] py-[.5em] rounded-[10px] border-[#1D87C5] font-[700] font-[grotesk] flex h-[52px] items-center justify-center gap-[1em]">
+                    <Link href="/about">About</Link>
                     <p className="font-[700] font-[grotesk]">Ver todos cases</p>
                     <Image src={vertodos} alt="" className="mt-[.2em]"/>
                 </span>
