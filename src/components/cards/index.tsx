@@ -2,27 +2,13 @@ import Image from "next/image";
 import { ReactNode } from "react";
 import Style from "@/assets/stytle.module.css";
 
-export const About = () => {
-    return(
-        <div className="flex flex-col px-[5em] gap-[1em] md:my-[5em] sm:my-[5em]">
-            <div className="flex flex-col gap-[.8em]">
-                <span className="font-[syne] text-[#105D94] text-[16pt] font-[600]">Quem sou</span>
-                <span className="font-[grotesk] text-[25pt] font-[400]">Com +1 ano de experiência no meio digital, atualmente trabalho como Designer Pleno e Freelancer, colaborando para o crescimento das empresas no mercado tech.</span>
-                <span className="font-[grotesk] text-[25pt] font-[400]">Compartilho conteúdo sobre Design de produto no Linkedin com +4K conexões.</span>
-            </div>
-            <div className="border-t-[1px] border-[#ddd] opacity-5"></div>
-            <div>
-                <DetailsAbout/>
-            </div>
-        </div>
-    )
-}
+
 
 const insta = require("@/assets/instagram.png");
 const linkedin = require("@/assets/lkdIn.png");
 const eyeAndStar = require("@/assets/EyeAndStar.png");
 
-const DetailsAbout = () => {
+export const DetailsAbout = () => {
     return(
         <div className="flex justify-between">
             <span className="flex gap-[1em]">
@@ -50,28 +36,10 @@ const SocialIconCard = ({icon}: SocialIconCardProps) => {
     )
 }
 
-const stars = require("@/assets/stars.png");
-
-export const TrajectoryDetails = () => {
-    return (
-        <div className="flex md:mx-[15em] sm:mx-[10em] xl:mx-[5em] justify-center items-start gap-[2em] h-[100vh] my-[10em]">
-            <Image src={stars} alt="" className="absolute z-0 "/>    
-            <span className="z-10 flex flex-col items-start justify-between w-[50%]">
-                <ProfileDetails/>
-                <Companies/>
-            </span>
-
-            <span className="z-10 flex flex-col w-[50%] gap-[1em]">
-                <Trajectory/>
-                <PlayList/>
-            </span>
-        </div>
-    )
-}
 
 const profile = require("@/assets/profilejosue.png")
 
-const ProfileDetails = () => {
+export const ProfileDetails = () => {
     return(
         <div className="w-[100%] border-[#ccc] border p-[2em] rounded-[8px] border-opacity-[.2] mb-[1em] flex justify-between">
             <span className="w-[50%]">
@@ -97,7 +65,7 @@ const ProfileDetails = () => {
 const company1 = require("@/assets/evoliumimage.png");
 const company2 = require("@/assets/baxtterimage.png");
 
-const Companies = () => {
+export const Companies = () => {
     return(
         <div className="w-[100%] border-[#ccc] border p-[2em] rounded-[8px] border-opacity-[.2] text-center flex flex-col gap-[1em] ">
             <span>
@@ -111,7 +79,7 @@ const Companies = () => {
     )
 }
 
-const Trajectory = () => {
+export const Trajectory = () => {
     return(
         <div className="border-[#ccc] border p-[2em] rounded-[8px] border-opacity-[.2] flex flex-col gap-[1em]">
             <TextBoldThin>
@@ -136,7 +104,7 @@ const cardimage1 = require("@/assets/cardimage1.png");
 const cardimage2 = require("@/assets/cardimage2.png");
 const cardimage3 = require("@/assets/cardimage3.png");
 
-const PlayList = () => {
+export const PlayList = () => {
     return (
         <div className="border-[#ccc] border p-[2em] rounded-[8px] border-opacity-[.2] flex flex-col gap-[1em]">
             <TextBoldThin>Minha Playlist</TextBoldThin>
@@ -197,12 +165,21 @@ const TextBoldThin = ({children}: TextBoldThin) => {
     )
 }
 
+const stars = require("@/assets/stars.png");
+
 export const Services = () => {
     return (
-        <div className="flex justify-between h-[100vh] px-[8em] py-[10em]">
-            <Image src={stars} alt="" className="absolute z-0 "/>    
-            <Servicedetails/>
-            <ServicesCard/>
+        <div className="px-[8em] py-[10em]">
+            <div className="flex justify-between z-10">
+                <Image src={stars} alt="" className="absolute z-0 "/>    
+                <Servicedetails/>
+                <ServicesCard/>
+            </div>
+
+            <div className="flex justify-center">
+                <span className="shadow-lowglow"></span>
+            </div>
+
         </div>
     )
 }
@@ -225,10 +202,37 @@ const Servicedetails = () => {
     )
 }
 
+const atach = require("@/assets/atached.png");
+
 const ServicesCard = () => {
     return(
-        <div>
-            cards details
+        <div className="w-[40%] flex flex-col gap-[1em]">
+
+            <Card title="UI Design" description="Crio interfaces visuais atraentes e intuitivas, garantindo uma experiência agradável para os usuários. Utilizamos cores, tipografia e layout para refletir a identidade da sua marca. Nosso objetivo é harmonizar estética e funcionalidade. Usamos ferramentas avançadas para entregar designs excepcionais."/>
+            <Card title="UX Design" description="Otimizo a experiência do usuário com pesquisas e testes aprofundados. Criamos soluções intuitivas que atendem às necessidades dos usuários. Utilizamos métodos como personas e protótipos para garantir interações eficientes. Nosso foco é proporcionar uma experiência satisfatória e significativa."/>
+            <Card title="Figma" description="Ofereço serviços especializados em Figma para design colaborativo e prototipagem interativa. Utilizamos todos os recursos da plataforma para garantir precisão e qualidade. Facilitamos a colaboração em tempo real e a construção de sistemas de design. Garantimos uma transição suave do design para o desenvolvimento."/>
+            
         </div>
     )
+}
+
+
+type CardProps = {
+    title: string,
+    description: string,
+}
+
+const Card = ({title, description}: CardProps) => {
+    return(
+        <div className="border rounded-[15px] w-[100%] p-[2em] flex flex-col gap-[1em]">
+
+            <Image src={atach} alt="" width={50} height={50}/>
+            <div className="flex flex-col gap-[.2em]">
+                <span className="font-[grotesk] font-[700] text-[20pt] z-10">{title}</span>
+                <span className="font-[grotesk] font-[400] text-[12pt] text-white z-10">{description}</span>
+                <span className="shadow-miniglow rounded-[100em] absolute mx-[14em] my-[4em]"></span>
+            </div>
+            
+        </div>
+    )   
 }
