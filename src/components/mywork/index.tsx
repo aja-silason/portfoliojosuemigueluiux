@@ -19,7 +19,7 @@ export const MyWork = () => {
                     <h2 className="font-[700] font-[grotesk] text-[45px]">VEJA O MEU TRABALHO</h2>
                 </span>
                 <span className="border border-dashed px-[1em] py-[.5em] rounded-[10px] border-[#1D87C5] font-[700] font-[grotesk] flex h-[52px] items-center justify-center gap-[1em]">
-                    <Link href="/about">About</Link>
+                    {/* <Link href="/about">About</Link> */}
                     <p className="font-[700] font-[grotesk]">Ver todos cases</p>
                     <Image src={vertodos} alt="" className="mt-[.2em]"/>
                 </span>
