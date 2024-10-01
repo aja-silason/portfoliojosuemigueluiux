@@ -253,3 +253,25 @@ export const CardEpecialist = ({icon, title, description}: CardEpecialistProps) 
         </div>
     )
 }
+
+
+type CardJobProps = {
+    image: string,
+    title: string,
+    description: string
+}
+
+export const CardJob = ({image, title, description}: CardJobProps) => {
+    return(
+        <div className="w-[400px] h-[400px] relative rounded-[20px]">
+            <div className="absolute z-10 w-[100%] h-[100%] flex flex-col justify-end">
+                <div className="bg-[#01031380] h-[120px] flex flex-col gap-[.5em] blur-[5px] w-[101%]"></div>
+                <div className="p-[1em] absolute flex flex-col gap-[5px]">
+                    <span className="border z-10 p-[1em] border-[#FFFFFF1A] rounded-[100px] w-[135px] text-[13px]">{title}</span>
+                    <span className="z-10 font-[grotesk] font-[700] text-[25px]">{description}</span>
+                </div>
+            </div>
+            <Image src={image} alt="" className="absolute w-[100%] h-[100%] rounded-[20px]"/>
+        </div>
+    )
+}
