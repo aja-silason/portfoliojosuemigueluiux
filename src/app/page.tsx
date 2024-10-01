@@ -1,6 +1,7 @@
 import { About } from "@/components/about"
 import { Services } from "@/components/cards"
 import { Container } from "@/components/container"
+import { Especiality } from "@/components/especiality"
 import { Header } from "@/components/header"
 import { Projects } from "@/components/projectscontainer"
 import { TrajectoryDetails } from "@/components/trajectory"
@@ -15,6 +16,7 @@ export default function Home (){
       <About/>
       <TrajectoryDetails/>
       <Services/>
+      <Especiality/>
     </Container>
   )
 }
