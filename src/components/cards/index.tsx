@@ -236,3 +236,20 @@ const Card = ({title, description}: CardProps) => {
         </div>
     )   
 }
+
+type CardEpecialistProps = {
+    icon: string,
+    title: string,
+    description: string,
+}
+export const CardEpecialist = ({icon, title, description}: CardEpecialistProps) => {
+    return (
+        <div className="w-[280px] h-[270px] backdrop-blur-1 p-[.8em] bg-gradient-to-r from-[#0E0C15] bg-[#0e0c1581] flex flex-col justify-between rounded-[10px]">
+            <Image src={icon} alt="" width={40} height={40}/>
+            <span className="flex flex-col gap-[.5em]">
+                <p className="font-[700] font-[grotesk] text-[25px]">{title}</p>
+                <p className="font-[400] font-[grotesk] text-[16px]">{description}</p>
+            </span>
+        </div>
+    )
+}
