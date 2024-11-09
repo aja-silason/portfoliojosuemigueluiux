@@ -5,6 +5,7 @@ import { Especiality } from "@/components/especiality"
 import { Header } from "@/components/header"
 import { MyWork } from "@/components/mywork"
 import { Projects } from "@/components/projectscontainer"
+import { StartNowSection } from "@/components/section"
 import { TrajectoryDetails } from "@/components/trajectory"
 import { TextTransition } from "@/components/transition"
 
@@ -19,6 +20,7 @@ export default function Home (){
       <Services/>
       <Especiality/>
       <MyWork/>
+      <StartNowSection/>
     </Container>
   )
 }
